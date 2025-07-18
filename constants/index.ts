@@ -225,6 +225,6 @@ export const dummyInterviews: Interview[] = [
     level: "Senior",
     questions: ["What is Node.js?"],
     finalized: false,
-    createdAt: "2024-03-14T15:30:00Z",
+    createdAt: "2025-07-19T15:30:00Z",
   },
 ];
