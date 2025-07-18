@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+// import "../globals.css";
 
 const AuthLayout = ({children} : {children: ReactNode}) => {
   return (
