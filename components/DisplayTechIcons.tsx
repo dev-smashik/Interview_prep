@@ -1,6 +1,7 @@
 import { getTechLogos } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react'
+import { cn } from '@/lib/utils';
 
 interface TechIconProps {
   techStack: string[];
@@ -11,17 +12,20 @@ const DisplayTechIcons = async ({ techStack }: TechIconProps) => {
   
   return (
     <div className='flex flex-row gap-2'>
-      {techIcons.slice(0, 3).map(({ tech, url }) => (
+      {techIcons.slice(0, 3).map(({ tech, url }, index) => (
         <div 
           key={tech} 
-          className='relative group bg-dark-300 rounded-full p-2 flex-center'
+          className={cn(
+            'relative group bg-dark-300 rounded-full p-2 flex-center',
+            index > 0 && '-ml-4'
+          )}
         >
           <span className='tech-tooltip'>{tech}</span>
           <Image 
             src={url} 
             alt={`${tech} icon`} 
-            width={20} 
-            height={20} 
+            width={24} 
+            height={24} 
             className="size-5 object-contain" 
           />
         </div>
